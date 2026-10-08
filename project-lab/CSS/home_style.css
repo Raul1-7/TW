@@ -1,0 +1,197 @@
+/* Layout specific pentru pagina home */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Evităm centrarea pe mijlocul ecranului */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Glass Header */
+.glass-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 15px;       
+} 
+
+.glass-header h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center; 
+}
+
+.glass-header nav {
+    display: flex;
+    gap: 20px; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.glass-header nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.glass-header nav a:hover, .glass-header nav a.active {
+    color: #fff;
+}
+
+.logout-btn {
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+.logout-btn:hover {
+    background: rgba(239, 68, 68, 0.8); /* Roșu la hover pe logout */
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-section h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    color: #94a3b8;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Columns / Cards */
+.columns {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.glass-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.glass-card .icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.glass-card h3 {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+}
+
+.glass-card p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.card-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    transition: background 0.3s;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card-btn:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    border-color: transparent;
+}
+
+/* Footer */
+.glass-footer {
+    margin-top: auto;
+    background: rgba(15, 23, 42, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px 0;
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #8b5cf6;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-section h2 {
+        font-size: 28px;
+    }
+    
+    .columns {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .glass-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}

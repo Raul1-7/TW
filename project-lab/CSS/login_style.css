@@ -1,0 +1,141 @@
+/* Containerul principal folosind efectul Glassmorphism */
+.glass-login-container {
+    display: flex;
+    width: 900px;
+    height: 550px;
+    background: rgba(30, 41, 59, 0.6); /* Translucid */
+    backdrop-filter: blur(16px); /* Efectul de sticlă mată */
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Partea stângă cu informații/imagine */
+.login-visual {
+    flex: 1;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-visual h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    z-index: 2;
+}
+
+.login-visual p {
+    font-size: 15px;
+    opacity: 0.9;
+    line-height: 1.6;
+    z-index: 2;
+}
+
+.visual-image {
+    margin-top: 30px;
+    width: 80%;
+    border-radius: 12px;
+    z-index: 2;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    mix-blend-mode: multiply; /* Se contopește frumos cu gradientul */
+}
+
+/* Partea dreaptă cu formularul */
+.login-form-wrapper {
+    flex: 1;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: transparent;
+}
+
+.login-form-wrapper h3 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.forgot-pass {
+    color: #8b5cf6;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot-pass:hover {
+    color: #a78bfa;
+}
+
+.modern-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.modern-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+}
+
+.register-link {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.register-link a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

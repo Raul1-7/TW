@@ -1,0 +1,50 @@
+.modern-loading-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.glow-ring {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: 30px; /* Lasă spațiu pentru text jos */
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #3b82f6; /* Albastru aprins */
+    border-bottom-color: #8b5cf6; /* Violet */
+    animation: spin 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.modern-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 1;
+    background: #1e293b;
+    padding: 10px;
+}
+
+.loading-text {
+    margin-top: 50px;
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Înregistrare</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/register_style.css">
+</head>
+<body class="center-content">
+    <div class="glass-register-container">
+        <h2>Creare Cont Nou</h2>
+        <p class="subtitle">Alătură-te comunității noastre de Web Development</p>
+        
+        <form action="#" method="post" enctype="multipart/form-data">
+            
+            <!-- Rândul 1: Nume și Email -->
+            <div class="row two-col">
+                <div class="input-group">
+                    <input type="text" name="username" placeholder="Nume utilizator" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Adresă Email" required>
+                </div>
+            </div>
+            
+            <!-- Rândul 2: Parole -->
+            <div class="row two-col">
+                <div class="input-group">
+                    <input type="password" name="password" placeholder="Parolă" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="confirm_password" placeholder="Confirmă parola" required>
+                </div>
+            </div>
+            
+            <!-- Rândul 3: Sex și Țară -->
+            <div class="row two-col align-center">
+                <div class="input-group">
+                    <label class="section-label">Sex:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="masculin"> Masc.</label>
+                        <label><input type="radio" name="gender" value="feminin"> Fem.</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label class="section-label">Țara:</label>
+                    <select name="country" class="modern-select">
+                        <option value="" disabled selected>Alege o țară</option>
+                        <option value="ro">România</option>
+                        <option value="md">Moldova</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Rândul 4: Interese și Poza de profil -->
+            <div class="row two-col align-center">
+                <div class="input-group">
+                    <label class="section-label">Domenii de interes:</label>
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" name="interest" value="frontend"> Front</label>
+                        <label><input type="checkbox" name="interest" value="backend"> Back</label>
+                        <label><input type="checkbox" name="interest" value="uiux"> UI/UX</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label class="section-label">Poză de profil:</label>
+                    <input type="file" name="profile_pic" class="modern-file">
+                </div>
+            </div>
+
+            <div class="actions">
+                <button type="submit" class="modern-btn">Înregistrare</button>
+            </div>
+            
+            <p class="login-link">
+                Ai deja cont? <a href="login.html">Conectează-te aici</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
