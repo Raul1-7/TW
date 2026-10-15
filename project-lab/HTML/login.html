@@ -17,26 +17,27 @@
         
         <div class="login-form-wrapper">
             <h3>Authentication</h3>
-            <form action="home.html">
-                <div class="input-group">
-                    <input type="email" placeholder="Email" required>
-                </div>
-                <div class="input-group">
-                    <input type="password" placeholder="Parolă" required>
-                </div>
-                
-                <div class="form-options">
-                    <label><input type="checkbox"> Don't forget me</label>
-                    <a href="#" class="forgot-pass">Do you forgot your password?</a>
-                </div>
+            <form id="loginForm">
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Parolă" required>
+            </div>
+            
+            <div class="form-options">
+                <label><input type="checkbox"> Ține-mă minte</label>
+                <a href="#" class="forgot-pass">Ai uitat parola?</a>
+            </div>
 
-                <button type="submit" class="modern-btn">Login to account</button>
-            </form>
+            <button type="submit" class="modern-btn">Intră în cont</button>
+        </form>
+        
             <p class="register-link">
                 Don't you have an account? <a href="register.html">Registrate now</a>
             </p>
         </div>
-        
     </div>
+    <script src="../JS/login_js.js"></script>
 </body>
 </html>
