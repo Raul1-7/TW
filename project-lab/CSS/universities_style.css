@@ -1,0 +1,133 @@
+.glass-container {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-section {
+    position: relative;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.back-link {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: #8b5cf6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.back-link:hover { color: #a78bfa; }
+
+.header-section h1 { margin: 0; }
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: #e5e7eb;
+    outline: none;
+    transition: all 0.3s;
+}
+
+input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+}
+
+.status {
+    opacity: 0.8;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* Stiluri pentru Tabel (Pasul 2) */
+.table-wrapper {
+    overflow-y: auto;
+    max-height: 400px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(15, 23, 42, 0.5);
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: left;
+    vertical-align: top;
+    color: #e2e8f0;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.05);
+    font-weight: 600;
+    color: #fff;
+    position: sticky;
+    top: 0;
+}
+
+td a {
+    color: #a7f3d0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+td a:hover {
+    text-decoration: underline;
+    color: #34d399;
+}
+
+.modern-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.modern-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+}
