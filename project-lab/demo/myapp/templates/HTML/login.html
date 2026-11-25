@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/login_style.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/cursor.css' %}">
+</head>
+<body>
+    <div class="glass-login-container">
+        <div class="login-visual">
+            <h2>Bun venit înapoi!</h2>
+            <p>Conectează-te pentru a accesa platforma laboratorului tău.</p>
+            <img src="{% static 'MEDIA/login_image.png' %}" alt="Decor" class="visual-image">
+        </div>
+        
+        <div class="login-form-wrapper">
+            <h3>Autentificare</h3>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email (ex: prenume.nume@e-uvt.ro)" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Parolă" required>
+                </div>
+                
+                <div class="form-options">
+                    <label><input type="checkbox"> Ține-mă minte</label>
+                    <a href="#" class="forgot-pass">Ai uitat parola?</a>
+                </div>
+
+                <button type="submit" class="modern-btn">Intră în cont</button>
+            </form>
+            <p class="register-link">
+                Nu ai cont? <a href="{% url 'register' %}">Înregistrează-te acum</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="{% static 'JS/cursor.js' %}"></script>
+    <script src="{% static 'JS/login.js' %}"></script>
+</body>
+</html>
